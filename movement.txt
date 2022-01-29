@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+
+namespace box_vs_box
+{
+
+    class playermovement
+    {
+       
+
+ 
+        KeyboardState kstate = Keyboard.GetState();
+        public Vector2 Spritelocation = new Vector2(0f, 0f);
+       
+        public void playerupdate()
+        {
+           
+            KeyboardState kstate = Keyboard.GetState();
+            if (kstate.IsKeyDown(Keys.Right))
+            {
+                Spritelocation.X += 10;
+
+            }
+            if (kstate.IsKeyDown(Keys.Left))
+            {
+                Spritelocation.X -= 10;
+
+            }
+            if (kstate.IsKeyDown(Keys.Up))
+            {
+                Spritelocation.Y -= 10;
+
+            }
+            if (kstate.IsKeyDown(Keys.Down))
+            {
+                Spritelocation.Y += 10;
+
+            }
+
+
+
+
+
+
+
+
+        }
+
+
+    }
+}
